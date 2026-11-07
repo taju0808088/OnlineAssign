@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExamEase | Student Login</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/login.js" defer></script>
+</head>
+<body class="page-login">
+  <main class="auth-layout">
+    <section class="welcome-panel">
+      <div class="brand"><span class="brand-mark">E</span><span>ExamEase</span></div>
+      <div class="welcome-copy">
+        <span class="eyebrow">ONLINE ASSESSMENT PORTAL</span>
+        <h1>Learn well.<br><span>Perform better.</span></h1>
+        <p>A simple, focused and reliable space to complete your examination.</p>
+        <div class="welcome-points">
+          <div><span class="point-icon">✓</span> Clear multiple-choice questions</div>
+          <div><span class="point-icon">◷</span> Live examination timer</div>
+          <div><span class="point-icon">▤</span> Instant result summary</div>
+        </div>
+      </div>
+      <div class="welcome-footer">Your exam. Your effort. Your result.</div>
+    </section>
+
+    <section class="login-side">
+      <div class="login-card">
+        <div class="mobile-brand"><span class="brand-mark">E</span> ExamEase</div>
+        <div class="card-icon">↗</div>
+        <span class="eyebrow">STUDENT ACCESS</span>
+        <h2>Welcome back</h2>
+        <p class="muted">Enter your details to start your examination.</p>
+
+        <form id="loginForm">
+          <label for="studentName">Student name</label>
+          <input id="studentName" name="studentName" type="text" placeholder="e.g. Rahul Kumar" autocomplete="name" required>
+
+          <label for="studentId">Student ID</label>
+          <input id="studentId" name="studentId" type="text" placeholder="e.g. STU1024" autocomplete="off" required>
+
+          <button class="btn btn-primary btn-full" type="submit">Continue to exam <span>→</span></button>
+        </form>
+        <div class="login-note"><span class="secure-dot"></span> Your details are used for this exam session only.</div>
+      </div>
+      <footer class="side-footer">© 2026 ExamEase · Online Examination System</footer>
+    </section>
+  </main>
+</body>
+</html>

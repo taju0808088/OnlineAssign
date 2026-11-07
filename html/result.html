@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExamEase | Your Result</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/result.js" defer></script>
+</head>
+<body class="page-app">
+  <header class="topbar">
+    <a class="brand brand-dark" href="index.html"><span class="brand-mark">E</span><span>ExamEase</span></a>
+    <span class="result-label">EXAMINATION SUMMARY</span>
+  </header>
+
+  <main class="result-shell">
+    <section class="result-hero">
+      <div class="result-check">✓</div>
+      <span class="eyebrow">EXAM COMPLETED</span>
+      <h1 id="resultGreeting">Well done!</h1>
+      <p class="muted">Your answers have been evaluated. Here is your performance summary.</p>
+    </section>
+
+    <section class="score-card">
+      <span class="score-caption">YOUR FINAL SCORE</span>
+      <div class="score-number"><strong id="score">0</strong><span>/ 10</span></div>
+      <div class="score-track"><div id="scoreBar" class="score-fill"></div></div>
+      <div id="resultStatus" class="status-badge">RESULT</div>
+      <p id="percentage" class="percentage">0% score</p>
+    </section>
+
+    <section class="result-details">
+      <div class="detail-box"><span class="detail-icon correct">✓</span><div><strong id="correctCount">0</strong><span>Correct answers</span></div></div>
+      <div class="detail-box"><span class="detail-icon wrong">×</span><div><strong id="wrongCount">0</strong><span>Wrong answers</span></div></div>
+      <div class="detail-box"><span class="detail-icon unanswered">–</span><div><strong id="unansweredCount">0</strong><span>Not answered</span></div></div>
+    </section>
+
+    <section class="result-message">
+      <h3>Keep moving forward</h3>
+      <p id="feedback" class="muted">Every attempt is a step towards improvement.</p>
+    </section>
+
+    <div class="result-actions">
+      <button id="retakeBtn" class="btn btn-primary" type="button">Take exam again ↻</button>
+      <button id="homeBtn" class="btn btn-light" type="button">Back to home</button>
+    </div>
+    <p class="result-footnote">This result is calculated automatically from your selected answers.</p>
+  </main>
+</body>
+</html>

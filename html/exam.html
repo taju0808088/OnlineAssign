@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExamEase | Examination</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/exam.js" defer></script>
+</head>
+<body class="page-app">
+  <header class="topbar">
+    <a class="brand brand-dark" href="index.html"><span class="brand-mark">E</span><span>ExamEase</span></a>
+    <div class="topbar-right"><span class="live-label"><span class="live-dot"></span> EXAM IN PROGRESS</span><button id="submitTop" class="btn btn-outline btn-small" type="button">Submit exam</button></div>
+  </header>
+
+  <main class="exam-shell">
+    <section class="exam-heading">
+      <div>
+        <span class="eyebrow">STUDENT ASSESSMENT</span>
+        <h1>General Knowledge Test</h1>
+        <p class="muted">Choose one answer for each question. You can review your answers before submitting.</p>
+      </div>
+      <div class="timer-card">
+        <span class="timer-caption">TIME REMAINING</span>
+        <strong id="timer">10:00</strong>
+      </div>
+    </section>
+
+    <section class="exam-meta">
+      <div><span class="meta-label">STUDENT</span><strong id="studentDisplay">Student</strong></div>
+      <div><span class="meta-label">QUESTIONS</span><strong>10</strong></div>
+      <div><span class="meta-label">TOTAL MARKS</span><strong>10</strong></div>
+      <div><span class="meta-label">MARKS / QUESTION</span><strong>1</strong></div>
+    </section>
+
+    <div class="progress-row">
+      <span id="progressText">Question 1 of 10</span>
+      <span id="answeredText">0 of 10 answered</span>
+    </div>
+    <div class="progress-track"><div id="progressBar" class="progress-fill"></div></div>
+
+    <section class="question-card">
+      <div class="question-top">
+        <span id="questionTag" class="question-tag">QUESTION 01</span>
+        <span class="mark-tag">1 MARK</span>
+      </div>
+      <h2 id="questionText">Loading question...</h2>
+      <div id="options" class="options-list"></div>
+      <div class="question-actions">
+        <button id="prevBtn" class="btn btn-light" type="button">← Previous</button>
+        <button id="nextBtn" class="btn btn-primary" type="button">Next question →</button>
+      </div>
+    </section>
+
+    <section class="question-navigation">
+      <div class="navigation-heading">
+        <div><h3>Question palette</h3><p class="muted">Select a number to jump to that question.</p></div>
+        <div class="legend"><span><i class="legend-current"></i> Current</span><span><i class="legend-done"></i> Answered</span><span><i class="legend-empty"></i> Not answered</span></div>
+      </div>
+      <div id="questionPalette" class="palette"></div>
+    </section>
+
+    <div class="exam-bottom-note">Your answers are saved in this browser while you complete the exam.</div>
+  </main>
+
+  <div id="confirmModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-icon">?</div>
+      <h2 id="modalTitle">Submit your examination?</h2>
+      <p id="modalMessage" class="muted">Once submitted, you cannot change your answers.</p>
+      <div class="modal-actions">
+        <button id="cancelSubmit" class="btn btn-light" type="button">Continue exam</button>
+        <button id="confirmSubmit" class="btn btn-primary" type="button">Yes, submit</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
